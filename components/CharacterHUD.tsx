@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { assetPath } from "@/lib/assets";
 
 export default function CharacterHUD() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -47,7 +48,7 @@ export default function CharacterHUD() {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <Image
-          src="/images/profile/hero-character.webp"
+          src={assetPath("/images/profile/hero-character.webp")}
           alt="YUMI Portfolio System 角色场景"
           fill
           priority

@@ -1,3 +1,5 @@
+import { assetPath } from "@/lib/assets";
+
 export type ProjectFilter = "AI" | "PRODUCT" | "DATA" | "RESEARCH" | "TECH";
 export type MediaKind = "cover" | "process" | "result" | "evidence" | "ui" | "medical" | "photo";
 
@@ -37,7 +39,7 @@ const media = (
   available: boolean,
   aspectRatio: ProjectMedia["aspectRatio"] = "landscape",
   objectPosition = "center",
-): ProjectMedia => ({ src, alt, caption, category, kind, available, aspectRatio, objectPosition });
+): ProjectMedia => ({ src: assetPath(src), alt, caption, category, kind, available, aspectRatio, objectPosition });
 
 export const agentMedia = {
   cover: media("/images/ai-agent/assistant-ui.webp", "AI assistant conversation and knowledge base interface", "AI Assistant Product Interface", "PROJECT COVER", "cover", true, "wide"),

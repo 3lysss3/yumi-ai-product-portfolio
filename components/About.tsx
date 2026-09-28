@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { assetPath } from "@/lib/assets";
 import SectionHeading from "./SectionHeading";
 
 const profileRows = [
@@ -31,7 +32,7 @@ export default function About() {
         >
           <div className="relative min-h-[440px] overflow-hidden border-b border-white/[0.08] lg:min-h-[620px] lg:border-b-0 lg:border-r">
             <Image
-              src="/images/profile/avatar.webp"
+              src={assetPath("/images/profile/avatar.webp")}
               alt="YUMI 人物简介照片"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
