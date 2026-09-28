@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+*.tsbuildinfo
+.vercel
+.env*
+.cloudbase/
+.tcb/
+.tools/
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+  
