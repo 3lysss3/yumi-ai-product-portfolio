@@ -42,7 +42,7 @@ const media = (
 ): ProjectMedia => ({ src: assetPath(src), alt, caption, category, kind, available, aspectRatio, objectPosition });
 
 export const agentMedia = {
-  cover: media("/images/ai-agent/assistant-ui.webp", "AI assistant conversation and knowledge base interface", "AI Assistant Product Interface", "PROJECT COVER", "cover", true, "wide"),
+  cover: media("/images/concept-lab/ai-agent-studio.webp", "AI Agent Studio workflow orchestration interface", "AI Agent Studio", "PROJECT COVER", "cover", true, "wide"),
   assistant: media("/images/ai-agent/assistant-ui.webp", "AI assistant conversation and knowledge base interface", "AI Assistant & Knowledge Base", "PRODUCT UI", "ui", true, "wide"),
   ui: media("/images/ai-agent/agent-ui.webp", "AI medical teaching agent interface", "AI Teaching Interface", "PRODUCT UI", "ui", true),
   workflow: media("/images/ai-agent/agent-workflow.webp", "AI medical agent workflow", "Agent Workflow", "PROCESS", "process", true),
@@ -82,7 +82,7 @@ export const miniProgramMedia = {
 };
 
 export const operationMedia = {
-  cover: media("/images/product-operation/dashboard.webp", "AI product operations dashboard with demonstration data", "AI Product Operations Dashboard · Demo Data", "PROJECT COVER", "cover", true, "wide"),
+  cover: media("/images/product-operation/operation-cover.webp", "AI product operations analysis interface", "AI Product Operations", "PROJECT COVER", "cover", true, "wide"),
   dashboard: media("/images/product-operation/dashboard.webp", "Product operations dashboard with demonstration data", "Product Dashboard · Demo Data", "DATA", "ui", true, "wide"),
   competitor: media("/images/product-operation/competitor-analysis.webp", "AI product competitor analysis template", "Competitor Analysis · Sample Data", "RESEARCH", "ui", true, "wide"),
   funnel: media("/images/product-operation/funnel.webp", "Product conversion funnel dashboard with demonstration data", "Conversion Funnel · Demo Data", "DATA", "result", true),
@@ -126,6 +126,15 @@ export const developmentMedia = {
   cakeEnvironment: media("/images/development/cake-dev-environment.webp", "WeChat developer tools showing the cake mini program implementation", "Mini Program Development Environment", "DEVELOPMENT EVIDENCE", "evidence", true, "wide"),
 };
 
+export const conceptLabMedia = {
+  petCommunity: media("/images/concept-lab/pet-community.webp", "Pet growth record and community product concept", "Pet Growth & Community", "CONCEPT UI", "cover", true, "wide"),
+  aiInterview: media("/images/concept-lab/ai-interview.webp", "AI interview assistant product concept interface", "AI Interview Assistant", "CONCEPT UI · DEMO DATA", "ui", true, "wide"),
+  attendance: media("/images/concept-lab/attendance-platform.webp", "Enterprise attendance management platform concept", "Smart Attendance Platform", "B2B CONCEPT · DEMO DATA", "ui", true, "wide"),
+  cocktail: media("/images/concept-lab/cocktail-ai.webp", "AI cocktail recommendation application concept", "AI Cocktail Assistant", "CONCEPT UI", "ui", true, "wide"),
+  freight: media("/images/concept-lab/freight-driver.webp", "Freight driver workflow tool concept", "Freight Driver Tool", "PRODUCT FLOW · DEMO DATA", "ui", true, "wide"),
+  truthOrDare: media("/images/concept-lab/truth-or-dare.webp", "Truth or dare mobile application concept", "Truth or Dare", "SIDE PROJECT · CONCEPT UI", "ui", true, "wide"),
+};
+
 export const awardMedia = [
   media("/images/awards/award-01.webp", "Privacy-redacted IICT artificial intelligence professional capability certificate issued to Lv Yushan", "IICT 人工智能岗位能力评价证书 · 2026", "CERTIFICATE", "evidence", true, "landscape"),
   media("/images/awards/award-02.webp", "Privacy-redacted Huawei HCIA AI certification issued to Yushan Lv", "Huawei HCIA-AI · Valid through 2029", "CERTIFICATE", "evidence", true, "landscape"),
@@ -136,9 +145,7 @@ export const projects: Project[] = [
   { id: "01", slug: "medical-agent", title: "医学教学智能体", englishTitle: "AI Medical Learning Agent", description: "围绕医学知识问答组织知识库、问题集与反馈流程，把模型能力转成可测试的学习体验。", tags: ["AI Agent", "RAG", "LLM", "Product Design"], role: "知识库整理 / 测试评估 / 提示词迭代", result: "完成 30+ 高频问题测试", cover: agentMedia.cover, category: "AI / AGENT / RAG", filters: ["AI", "PRODUCT", "TECH"], caseTarget: "ai-agent-case", featured: true },
   { id: "02", slug: "medical-imaging", title: "听神经瘤 AI 分割系统", englishTitle: "AI Medical Imaging System", description: "把影像上传、AI 分割、参数计算和报告输出串成完整流程，让技术结果进入可验证的使用任务。", tags: ["Medical AI", "Computer Vision", "Visualization"], role: "项目组长 / 需求拆解 / 效果评估", result: "小病灶 Dice 0.86 · 单例推理 <10 秒", cover: medicalMedia.cover, category: "AI / MEDICAL / TECH", filters: ["AI", "PRODUCT", "TECH"], caseTarget: "medical-ai-case", featured: true },
   { id: "03", slug: "ai-product-operations", title: "AI 产品增长与运营", englishTitle: "AI Product Growth & Operations", description: "从反馈、行为与竞品信息出发组织问题优先级，形成可跟进的策略与迭代路径。", tags: ["Product Operations", "Data", "Iteration"], role: "问题归类 / 数据框架 / 策略复盘", result: "以演示界面呈现分析与迭代框架", cover: operationMedia.cover, category: "DATA / OPERATIONS", filters: ["AI", "DATA", "PRODUCT"], caseTarget: "operations-case", featured: true },
-  { id: "04", slug: "cake-mini-program", title: "蛋糕点单小程序", englishTitle: "Cake Ordering Mini Program", description: "围绕浏览、分类、选品与下单梳理移动端信息架构，用真实界面验证核心操作路径。", tags: ["Product Design", "Mini Program", "UX"], role: "信息架构 / 交互原型 / 产品展示", result: "已完成核心点单流程原型", cover: miniProgramMedia.cakeCover, category: "PRODUCT / EXECUTION", filters: ["PRODUCT", "TECH"], caseTarget: "product-execution", featured: true },
-  { id: "05", slug: "offline-research", title: "茶文化线下用户研究", englishTitle: "Offline User Research", description: "通过门店与从业者访谈归纳经营模式、推广难点和用户需求，寻找产品化机会。", tags: ["User Interview", "Field Research", "Insight"], role: "走访沟通 / 问题归纳 / 机会识别", result: "走访 20+ 家门店", cover: researchMedia.cover, category: "RESEARCH / STRATEGY", filters: ["RESEARCH", "PRODUCT", "DATA"], caseTarget: "research-case", featured: false },
-  { id: "06", slug: "ecommerce-operations", title: "电商产品运营分析", englishTitle: "E-commerce Product Operations", description: "用经营、商品与用户视角建立分析框架，强调问题定位、商业理解与策略制定。", tags: ["E-commerce", "Data Analysis", "Strategy"], role: "指标框架 / 商品分析 / 策略整理", result: "以演示数据呈现经营分析框架", cover: ecommerceMedia.cover, category: "DATA / OPERATIONS", filters: ["DATA", "PRODUCT"], caseTarget: "other-projects", featured: false },
+  { id: "04", slug: "product-concept-lab", title: "产品概念实验室", englishTitle: "Product Concept Lab", description: "围绕宠物、企业服务、物流和生活方式场景，用界面原型快速验证信息架构与关键任务。", tags: ["Product Design", "B2B", "UX"], role: "场景拆解 / 信息架构 / 交互表达", result: "概念界面仅展示设计思路，不代表真实上线或业务数据", cover: conceptLabMedia.petCommunity, category: "PRODUCT / CONCEPT", filters: ["PRODUCT", "TECH"], caseTarget: "prototype-lab", featured: true },
 ];
 
 export const projectCategories = [
@@ -148,19 +155,10 @@ export const projectCategories = [
   { id: "04", name: "PRODUCT EXECUTION", count: "06", note: "点单 / 调酒 / 校园交易 / 货运 / 租住" },
 ] as const;
 
-export const behindWorkMedia: ProjectMedia[] = [
-  medicalMedia.validation,
-  agentMedia.workflow,
-  developmentMedia.cakeEnvironment,
-  researchMedia.interview,
-  medicalMedia.training,
-  miniProgramMedia.cakeHome,
-  operationMedia.competitor,
-  researchMedia.notes,
-  miniProgramMedia.cocktailResult,
-  medicalMedia.comparison,
-  operationMedia.user,
-  researchMedia.secondary,
-  agentMedia.rag,
-  additionalProductMedia.cargoDriver,
+export const conceptLabGallery: ProjectMedia[] = [
+  conceptLabMedia.aiInterview,
+  conceptLabMedia.attendance,
+  conceptLabMedia.cocktail,
+  conceptLabMedia.freight,
+  conceptLabMedia.truthOrDare,
 ];

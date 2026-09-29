@@ -6,7 +6,7 @@ import About from "./About";
 import AgentCaseStudy from "./AgentCaseStudy";
 import AIThinking from "./AIThinking";
 import BehindWork from "./BehindWork";
-import Categories from "./Categories";
+import CinematicIndex from "./CinematicIndex";
 import CustomCursor from "./CustomCursor";
 import Experience from "./Experience";
 import Footer from "./Footer";
@@ -15,11 +15,8 @@ import Intro, { type IntroState } from "./Intro";
 import InteractiveDemos from "./InteractiveDemos";
 import MedicalAICaseStudy from "./MedicalAICaseStudy";
 import Navbar from "./Navbar";
-import OtherProjects from "./OtherProjects";
 import OutroSection from "./OutroSection";
-import ProductExecution from "./ProductExecution";
 import ProductOperationsCaseStudy from "./ProductOperationsCaseStudy";
-import ProjectTransition from "./ProjectTransition";
 import Projects from "./Projects";
 import ScrollIndicator from "./ScrollIndicator";
 import Skills from "./Skills";
@@ -45,18 +42,15 @@ export default function PortfolioExperience() {
           <Hero revealed={visible} />
           <About />
           <Skills />
+          <CinematicIndex />
           <Projects />
-          <Categories />
           <AIThinking />
           <AgentCaseStudy />
           <MedicalAICaseStudy />
-          <ProjectTransition />
           <ProductOperationsCaseStudy />
-          <ProductExecution />
+          <BehindWork />
           <UserResearchCaseStudy />
           <InteractiveDemos />
-          <OtherProjects />
-          <BehindWork />
           <Experience />
           <OutroSection />
         </main>

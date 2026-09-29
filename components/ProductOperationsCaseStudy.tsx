@@ -1,20 +1,25 @@
-import { operationMedia } from "@/data/projects";
 import { portfolioVideos } from "@/data/media";
+import { operationMedia } from "@/data/projects";
 import PortfolioVideo from "./PortfolioVideo";
 import ProjectGallery from "./ProjectGallery";
 import ProjectSection from "./ProjectSection";
 
-const loop = ["PROBLEM", "DATA", "INSIGHT", "STRATEGY", "ITERATION"];
-const insights = ["把分散反馈归到具体功能与使用场景。", "区分演示指标与真实业务结果，避免过度结论。", "每条策略都需要对应验证口径和复盘入口。"];
+const loop = ["问题归类", "数据观察", "形成洞察", "策略推进", "复盘迭代"];
 
 export default function ProductOperationsCaseStudy() {
   return (
-    <ProjectSection id="operations-case" number="03" kicker="AI PRODUCT OPERATIONS" title="AI Product Growth & Operations" subtitle="以问题闭环、数据框架和迭代节奏强化 AI 产品运营能力。">
-      <div className="mt-14"><PortfolioVideo src={portfolioVideos.dataIteration.src} available={portfolioVideos.dataIteration.available} label="DATA-DRIVEN ITERATION / ORIGINAL AUDIO" /></div>
-      <div className="mt-6 grid gap-px border border-white/[0.08] bg-white/[0.08] sm:grid-cols-5">{loop.map((item, index) => <div key={item} className="bg-[#090909] px-4 py-5"><span className="font-mono text-[8px] text-signal">0{index + 1}</span><p className="mt-3 font-mono text-[9px] text-white/60">{item}</p></div>)}</div>
-      <div className="mt-20"><p className="font-mono text-[10px] text-signal">DATA / USER BEHAVIOR</p><ProjectGallery images={[operationMedia.dashboard, operationMedia.user, operationMedia.funnel]} columns={3} className="mt-6" /><p className="mt-4 text-xs leading-6 text-white/35">看板图片包含演示数据，仅用于展示指标结构与分析界面，不作为真实业务增长证明。</p></div>
-      <div className="mt-20"><p className="font-mono text-[10px] text-signal">INSIGHT</p><div className="mt-6 grid gap-4 md:grid-cols-3">{insights.map((item, index) => <div key={item} className="border border-white/[0.09] bg-white/[0.025] p-6"><span className="font-mono text-[9px] text-signal">0{index + 1}</span><p className="mt-5 text-sm leading-7 text-white/62">{item}</p></div>)}</div></div>
-      <div className="mt-20"><p className="font-mono text-[10px] text-signal">RESEARCH / STRATEGY / ITERATION</p><ProjectGallery images={[operationMedia.competitor, operationMedia.strategy, operationMedia.iteration]} columns={3} className="mt-6" /></div>
+    <ProjectSection id="operations-case" number="03" kicker="AI PRODUCT OPERATIONS" title="AI Product Growth & Operations" subtitle="让反馈、指标和协作进入同一条可跟进的迭代路径。">
+      <div className="mt-14 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <PortfolioVideo src={portfolioVideos.dataIteration.src} available={portfolioVideos.dataIteration.available} label="DATA-DRIVEN ITERATION / ORIGINAL AUDIO" />
+        <div className="border-y border-white/[0.08]">
+          {loop.map((item, index) => <div key={item} className="grid grid-cols-[42px_1fr] border-b border-white/[0.08] py-4 last:border-b-0"><span className="font-mono text-[9px] text-signal">0{index + 1}</span><p className="text-sm text-white/65">{item}</p></div>)}
+        </div>
+      </div>
+      <div className="mt-16">
+        <p className="font-mono text-[10px] text-signal">DATA → INSIGHT → ITERATION</p>
+        <ProjectGallery images={[operationMedia.dashboard, operationMedia.user, operationMedia.competitor, operationMedia.iteration]} className="mt-6" />
+        <p className="mt-5 text-xs leading-6 text-white/35">图中包含演示数据，仅用于说明分析框架与信息结构，不作为真实增长、转化或经营结果。</p>
+      </div>
     </ProjectSection>
   );
 }

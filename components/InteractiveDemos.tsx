@@ -24,7 +24,7 @@ function DemoPanel({ index, title, description, screenshots, qr, note }: DemoPan
 
           <div className="mt-7 inline-grid grid-cols-[112px_1fr] items-center gap-5 border border-white/[0.1] bg-white/[0.025] p-4">
             <div className="bg-white p-1.5">
-              <Image src={qr.src} alt={qr.alt} width={112} height={112} quality={100} unoptimized className="h-auto w-full" />
+              <Image src={qr.src} alt={qr.alt} width={112} height={112} quality={92} unoptimized className="h-auto w-full" />
             </div>
             <div>
               <ScanLine className="h-5 w-5 text-signal" aria-hidden="true" />
